@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ageless Beauty Aesthetics</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blush: "#d8bebd",
+            blushDeep: "#cfaead",
+            cream: "#f8f5f3",
+            ink: "#1f1a1a",
+            soft: "#6f6464"
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', "serif"],
+            sans: ['"Inter"', "sans-serif"]
+          },
+          boxShadow: {
+            soft: "0 20px 60px rgba(0,0,0,0.08)"
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .hero-title {
+      line-height: 0.9;
+    }
+  </style>
+
+  <!-- Custom JS -->
+  <script src="script.js" defer></script>
+</head>
+<body class="bg-blush font-sans text-ink overflow-x-hidden">
+
+  <!-- Outer background section -->
+  <div class="min-h-screen px-4 sm:px-6 lg:px-10 py-6 sm:py-8">
+    
+    <!-- Main framed site -->
+    <div class="max-w-7xl mx-auto bg-cream shadow-soft">
+
+      <!-- Top bar -->
+      <div class="border-b border-black/10">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between text-[11px] sm:text-xs tracking-[0.18em] uppercase">
+          <a href="#" class="font-semibold text-base sm:text-lg tracking-[0.22em]">ABA</a>
+
+          <div class="hidden md:flex items-center gap-4 text-soft tracking-normal normal-case text-sm">
+            <span class="w-8 h-px bg-black/20"></span>
+            <span>Certified aesthetic nurse injector • beauty & wellness</span>
+            <span class="w-8 h-px bg-black/20"></span>
+          </div>
+
+          <a href="https://squareup.com/appointments/book/L54P2T0ES2QPG" target="_blank" class="border border-black px-4 py-2 text-[11px] sm:text-xs tracking-[0.16em] uppercase hover:bg-black hover:text-white transition">
+            Book Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <header class="max-w-6xl mx-auto px-5 sm:px-8 py-6">
+        <div class="flex items-center justify-between gap-6">
+          <div>
+            <p class="font-serif text-xl sm:text-2xl tracking-[0.12em] uppercase">
+              Ageless Beauty <span class="text-soft">|</span> Aesthetics
+            </p>
+          </div>
+
+          <nav class="hidden md:flex items-center gap-8 text-sm text-soft">
+            <a href="#about" class="hover:text-black transition">About</a>
+            <a href="#services" class="hover:text-black transition">Services</a>
+            <a href="#reviews" class="hover:text-black transition">Reviews</a>
+            <a href="#contact" class="hover:text-black transition">Contact</a>
+          </nav>
+
+          <button id="menuBtn" class="md:hidden flex flex-col gap-1.5" aria-label="Open Menu">
+            <span class="w-6 h-[1.5px] bg-black block"></span>
+            <span class="w-6 h-[1.5px] bg-black block"></span>
+            <span class="w-6 h-[1.5px] bg-black block"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="fixed inset-0 z-50 bg-[#f8f5f3] hidden">
+        <div class="h-full flex flex-col px-6 py-6">
+          <div class="flex items-center justify-between mb-10">
+            <p class="font-serif text-2xl uppercase tracking-[0.12em]">Ageless Beauty</p>
+            <button id="closeMenu" class="text-3xl leading-none">&times;</button>
+          </div>
+
+          <nav class="flex flex-col gap-6 text-lg text-soft">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#reviews" class="mobile-link">Reviews</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+          </nav>
+
+          <div class="mt-auto pt-10">
+            <a href="https://squareup.com/appointments/book/L54P2T0ES2QPG" target="_blank" class="inline-block border border-black px-6 py-3 uppercase tracking-[0.15em] text-sm hover:bg-black hover:text-white transition">
+              Book Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <section class="relative px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14">
+        <div class="relative overflow-hidden" data-aos="fade-up" data-aos-duration="1200">
+          <img 
+            src="assets/Hero.svg"
+            alt="Luxury beauty aesthetic hero"
+            class="w-full h-[420px] sm:h-[540px] lg:h-[640px] object-cover"
+          />
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+
+          <div class="absolute bottom-0 left-0 w-full px-5 sm:px-10 lg:px-16 pb-0">
+            <h1 class="hero-title font-serif text-white text-[3.2rem] sm:text-[5rem] lg:text-[7rem] font-medium">
+              Ageless <br class="sm:hidden"> Beauty
+            </h1>
+            <p class="mt-3 text-white/90 text-sm sm:text-base max-w-xl pb-8">
+              Enhancing natural beauty, preserving youth, and boosting confidence through safe and effective treatments.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <p class="uppercase tracking-[0.22em] text-xs text-soft mb-4">About</p>
+            <h2 class="font-serif text-4xl sm:text-5xl mb-5">Welcome to Ageless Beauty Aesthetics</h2>
+            <p class="text-soft leading-7 text-base sm:text-lg">
+              Founded by Adriana Kuti, RN, Ageless Beauty Aesthetics is dedicated to enhancing your natural beauty and boosting your confidence in a comfortable, welcoming environment. We operate under a medical doctor and use high-quality pharmaceutical-grade products to ensure safe, beautiful, and lasting results.
+            </p>
+            <a href="#services" class="inline-block mt-8 border-b border-black pb-1 text-sm uppercase tracking-[0.16em] hover:opacity-70 transition">
+              Explore Services
+            </a>
+          </div>
+
+          <div data-aos="fade-left">
+            <img 
+              src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop"
+              alt="Beauty consultation"
+              class="w-full h-[420px] object-cover shadow-soft"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="bg-[#efe4e3]">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-20">
+          <div class="mb-12" data-aos="fade-up">
+            <p class="uppercase tracking-[0.22em] text-xs text-soft mb-4">Services</p>
+            <h2 class="font-serif text-4xl sm:text-5xl">Services</h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-8 shadow-soft" data-aos="fade-up" data-aos-delay="0">
+              <h3 class="font-serif text-2xl mb-3">Botox & Dermal Fillers</h3>
+              <p class="text-soft leading-7">
+                Smooth fine lines, restore volume, and enhance your natural features with balanced, professional care.
+              </p>
+            </div>
+
+            <div class="bg-white p-8 shadow-soft" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="font-serif text-2xl mb-3">Wellness Injections</h3>
+              <p class="text-soft leading-7">
+                Weight loss injections, vitamin injections, and peptide therapy designed to support your overall health and wellness.
+              </p>
+            </div>
+
+            <div class="bg-white p-8 shadow-soft" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="font-serif text-2xl mb-3">Skin Rejuvenation</h3>
+              <p class="text-soft leading-7">
+                Micro-needling and PRP treatments to improve skin texture, boost collagen, and restore a youthful glow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <section id="reviews" class="bg-[#f4eceb]">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-20">
+          <div class="mb-12" data-aos="fade-up">
+            <p class="uppercase tracking-[0.22em] text-xs text-soft mb-4">Reviews</p>
+            <h2 class="font-serif text-4xl sm:text-5xl">5-Star Client Reviews</h2>
+            <p class="text-soft mt-4 max-w-2xl leading-7">
+              Real results. Real experiences. See why clients trust Ageless Beauty Aesthetics for Botox, fillers, wellness treatments, and more.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-white p-8 shadow-soft" data-aos="fade-up">
+              <div class="flex items-center gap-1 text-[#cfaead] text-lg mb-4">
+                ★★★★★
+              </div>
+              <p class="text-soft leading-7 mb-5">
+                “Hands down the best decision I’ve made for my health and confidence. From the very first appointment, she made me feel comfortable, informed, and completely taken care of.”
+              </p>
+              <span class="uppercase tracking-[0.18em] text-xs">— Cassie Marrufo</span>
+            </div>
+
+            <div class="bg-white p-8 shadow-soft" data-aos="fade-up" data-aos-delay="100">
+              <div class="flex items-center gap-1 text-[#cfaead] text-lg mb-4">
+                ★★★★★
+              </div>
+              <p class="text-soft leading-7 mb-5">
+                “It was my first time ever receiving any aesthetics and Ageless Beauty Aesthetics made it the best experience. Adriana made sure I was as comfortable as possible.”
+              </p>
+              <span class="uppercase tracking-[0.18em] text-xs">— Yvette Bertoldo</span>
+            </div>
+
+            <div class="bg-white p-8 shadow-soft" data-aos="fade-up" data-aos-delay="200">
+              <div class="flex items-center gap-1 text-[#cfaead] text-lg mb-4">
+                ★★★★★
+              </div>
+              <p class="text-soft leading-7 mb-5">
+                “I had an amazing microneedling experience with Adriana! She’s incredibly knowledgeable, gentle, and makes you feel comfortable every step of the way.”
+              </p>
+              <span class="uppercase tracking-[0.18em] text-xs">— Stephanie Arguelles</span>
+            </div>
+
+            <div class="bg-white p-8 shadow-soft" data-aos="fade-up">
+              <div class="flex items-center gap-1 text-[#cfaead] text-lg mb-4">
+                ★★★★★
+              </div>
+              <p class="text-soft leading-7 mb-5">
+                “I’ve been getting my Botox with Adriana for years and I’ve always been so happy. I have such a natural look and she always makes sure everything is done safely.”
+              </p>
+              <span class="uppercase tracking-[0.18em] text-xs">— Anais Ochoa</span>
+            </div>
+
+            <div class="bg-white p-8 shadow-soft" data-aos="fade-up" data-aos-delay="100">
+              <div class="flex items-center gap-1 text-[#cfaead] text-lg mb-4">
+                ★★★★★
+              </div>
+              <p class="text-soft leading-7 mb-5">
+                “I love this place! Adriana is so great and knowledgeable. I had minimal pain and she made sure I was comfortable throughout the whole process.”
+              </p>
+              <span class="uppercase tracking-[0.18em] text-xs">— Natalie Aldaz</span>
+            </div>
+
+            <div class="bg-white p-8 shadow-soft" data-aos="fade-up" data-aos-delay="200">
+              <div class="flex items-center gap-1 text-[#cfaead] text-lg mb-4">
+                ★★★★★
+              </div>
+              <p class="text-soft leading-7 mb-5">
+                “She’s so kind and really makes sure to make you comfortable. Her prices are also amazing. I’ve definitely found my new injector!”
+              </p>
+              <span class="uppercase tracking-[0.18em] text-xs">— Rachel Martinez</span>
+            </div>
+
+          </div>
+
+          <div class="mt-10 text-center" data-aos="fade-up">
+            <a 
+              href="https://squareup.com/appointments/book/L54P2T0ES2QPG" 
+              target="_blank"
+              class="inline-block border border-black px-6 py-3 uppercase tracking-[0.16em] text-sm hover:bg-black hover:text-white transition"
+            >
+              Book Your Appointment
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+          <div data-aos="fade-right">
+            <p class="uppercase tracking-[0.22em] text-xs text-soft mb-4">Contact</p>
+            <h2 class="font-serif text-4xl sm:text-5xl mb-5">Book your appointment</h2>
+            <p class="text-soft leading-7 text-base sm:text-lg mb-8">
+              Ready to enhance your natural beauty? Schedule your consultation today and experience personalized aesthetic care.
+            </p>
+
+            <div class="space-y-3 text-sm sm:text-base text-soft">
+              <p>Phone: (575) 528-8036</p>
+              <p>Location: 1840 Lee Trevino Dr Ste 100, El Paso, TX 79936</p>
+            </div>
+
+            <a href="https://squareup.com/appointments/book/L54P2T0ES2QPG" target="_blank" class="inline-block mt-8 border border-black px-6 py-3 uppercase tracking-[0.16em] text-sm hover:bg-black hover:text-white transition">
+              Book Appointment
+            </a>
+          </div>
+
+          <div data-aos="fade-left" class="bg-white shadow-soft p-6 sm:p-8">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/thank-you"
+              class="space-y-4"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+
+              <p class="hidden">
+                <label>
+                  Don’t fill this out if you're human:
+                  <input name="bot-field" />
+                </label>
+              </p>
+
+              <input
+                type="text"
+                name="full_name"
+                placeholder="Full Name"
+                required
+                class="w-full border border-black/15 bg-white px-4 py-3 outline-none focus:border-black transition"
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+                class="w-full border border-black/15 bg-white px-4 py-3 outline-none focus:border-black transition"
+              />
+
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone Number"
+                class="w-full border border-black/15 bg-white px-4 py-3 outline-none focus:border-black transition"
+              />
+
+              <select
+                name="service_interest"
+                class="w-full border border-black/15 bg-white px-4 py-3 outline-none focus:border-black transition"
+              >
+                <option value="">Service Interested In</option>
+                <option>Botox</option>
+                <option>Dermal Fillers</option>
+                <option>Weight Loss Injections</option>
+                <option>Vitamin Injections</option>
+                <option>Peptide Therapy</option>
+                <option>Microneedling</option>
+                <option>PRP</option>
+                <option>Other</option>
+              </select>
+
+              <textarea
+                name="message"
+                placeholder="Tell us what you're interested in..."
+                rows="5"
+                class="w-full border border-black/15 bg-white px-4 py-3 outline-none focus:border-black transition resize-none"
+              ></textarea>
+
+              <button
+                type="submit"
+                class="w-full border border-black px-6 py-3 uppercase tracking-[0.16em] text-sm hover:bg-black hover:text-white transition"
+              >
+                Send Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="border-t border-black/10">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-soft">
+          <p>© 2024 Ageless Beauty Aesthetics. All rights reserved.</p>
+          <div class="flex items-center gap-5">
+            <a href="#about" class="hover:text-black transition">About</a>
+            <a href="#services" class="hover:text-black transition">Services</a>
+            <a href="https://squareup.com/appointments/book/L54P2T0ES2QPG" target="_blank" class="hover:text-black transition">Book Now</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1000,
+      easing: "ease-out-cubic"
+    });
+
+    const menuBtn = document.getElementById("menuBtn");
+    const closeMenu = document.getElementById("closeMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+
+    menuBtn?.addEventListener("click", () => {
+      mobileMenu.classList.remove("hidden");
+    });
+
+    closeMenu?.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  </script>
+</body>
+</html>
